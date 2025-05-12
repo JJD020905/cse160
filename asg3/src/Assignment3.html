@@ -1,0 +1,58 @@
+<!-- Junjie Deng -->
+<!-- jdeng42@ucsc.edu -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 3</title>
+    <script src="Assignment3.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Cylinder.js"></script>
+    <script src="Camera.js"></script>
+
+    <!-- <script src="lib/cuon-matrix-cse160.js"></script> -->
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="../lib/cuon-vector.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+</head>
+
+<body onload="main()">
+    <canvas id="webgl" width="1280" height="720">
+            Please use a browser that supports "canvas"
+        </canvas>
+    <p>
+        <span id="info" style="display: inline-block; width: 200px;">Info</span>
+        <span style="color: blue;">keyboard:</span>
+        <span id="keyboard" style="display: inline-block; width: 100px;">none</span>
+        <span style="display: inline-block; width: 100px; color: blue;">mouse:</span>
+        <span id="mouse" style="display: inline-block; width: 100px;">none</span>
+        <span>Camera Angle: <input type="range" min="0" max="360" value="180" class="slider" id="angleSlide"></span>
+    </p>
+
+    <input type="image" id="hand" src="../textures/hand.png" width="48" height="48" />
+    <input type="image" id="pickaxe" src="../textures/pickaxe.png" width="48" height="48" />
+    <input type="image" id="dirt" src="../textures/dirt.png" width="48" height="48" />
+    <input type="image" id="grass" src="../textures/grass_top.png" width="48" height="48" />
+    <input type="image" id="sand" src="../textures/sand.png" width="48" height="48" />
+    <input type="image" id="brick" src="../textures/brick.png" width="48" height="48" />
+    <input type="image" id="iron" src="../textures/iron_block.png" width="48" height="48" />
+    <input type="image" id="gold" src="../textures/gold_block.png" width="48" height="48" />
+    <input type="image" id="metal_sheet" src="../textures/metal_sheet.png" width="48" height="48" />
+    <input type="image" id="log_acacia" src="../textures/log_acacia_top.png" width="48" height="48" />
+    <button type="button" id="save">Save</button>
+    <button type="button" id="load">Load</button> You can save your world after you build your world, and also you can load your world.
+    <p>
+      W, A, S, D for movement. Q, E for camera. Click the hand icon for moving camera on canvas. Pickaxe for removing block.
+    <p>
+      Select the texture you want then left click for placing the block.
+
+</body>
+
+</html>
