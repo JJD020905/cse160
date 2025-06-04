@@ -41,18 +41,18 @@ function createBasicShapes() {
     scene.add(cube);
     shapes.push(cube);
 
-    const cube2 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0000ff }));
+    const cube2 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0f00ff }));
     cube2.position.set(-8, 0.5, 2);
     scene.add(cube2);
     shapes.push(cube2);
 
-    const cube3 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0000ff }));
+    const cube3 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0xf000ff }));
     cube3.position.set(-8, 0.5, 4);
     scene.add(cube3);
     shapes.push(cube3);
 
-    const cube4 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0000ff }));
-    cube4.position.set(-8, 0.5, 2);
+    const cube4 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00ffff }));
+    cube4.position.set(-8, 0.5, 6);
     scene.add(cube4);
     shapes.push(cube4);
 
