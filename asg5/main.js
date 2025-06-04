@@ -41,8 +41,8 @@ function createBasicShapes() {
     scene.add(cube);
     shapes.push(cube);
 
-    const cube2 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0f00ff }));
-    cube2.position.set(-8, 0.5, 2);
+    const cube2 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0xffffff }));
+    cube2.position.set(0, 1, 10);
     scene.add(cube2);
     shapes.push(cube2);
 
