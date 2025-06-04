@@ -41,41 +41,6 @@ function createBasicShapes() {
     scene.add(cube);
     shapes.push(cube);
 
-    const cube2 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0xffffff }));
-    cube2.position.set(0, 1, 10);
-    scene.add(cube2);
-    shapes.push(cube2);
-
-    const cube3 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0xf080ff }));
-    cube3.position.set(-8, 0.5, 4);
-    scene.add(cube3);
-    shapes.push(cube3);
-
-    const cube4 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00ff9f }));
-    cube4.position.set(-8, 0.5, 6);
-    scene.add(cube4);
-    shapes.push(cube4);
-
-    const cube5 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00ffff }));
-    cube5.position.set(-8, 2, 0);
-    scene.add(cube5);
-    shapes.push(cube5);
-
-    const cube6 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00f8ff }));
-    cube6.position.set(-8, 4, 0);
-    scene.add(cube6);
-    shapes.push(cube6);
-
-    const cube7 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x88f8ff }));
-    cube7.position.set(-8, 6, 0);
-    scene.add(cube7);
-    shapes.push(cube7);
-
-    const cube8 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x8888ff }));
-    cube8.position.set(-8, 8, 0);
-    scene.add(cube8);
-    shapes.push(cube8);
-
     // Sphere
     const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32);
     const sphereMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
@@ -195,6 +160,141 @@ function createBasicShapes() {
     texturedCube.receiveShadow = true;
     scene.add(texturedCube);
     shapes.push(texturedCube);
+
+    // TorusKnot
+    const torusKnot2Geometry = new THREE.TorusKnotGeometry(0.5, 0.2, 100, 16);
+    const torusKnot2Material = new THREE.MeshStandardMaterial({ color: 0xff1493 });
+    const torusKnot2 = new THREE.Mesh(torusKnot2Geometry, torusKnot2Material);
+    torusKnot2.position.set(-4, 0.5, 2);
+    torusKnot2.castShadow = true;
+    scene.add(torusKnot2);
+    shapes.push(torusKnot2);
+
+    // Torus
+    const torus2Geometry = new THREE.TorusGeometry(0.5, 0.2, 16, 100);
+    const torus2Material = new THREE.MeshStandardMaterial({ color: 0x00bfff });
+    const torus2 = new THREE.Mesh(torus2Geometry, torus2Material);
+    torus2.position.set(4, 0.5, 2);
+    torus2.castShadow = true;
+    scene.add(torus2);
+    shapes.push(torus2);
+
+    // Icosahedron
+    const icosahedron2Geometry = new THREE.IcosahedronGeometry(0.5);
+    const icosahedron2Material = new THREE.MeshStandardMaterial({ color: 0x32cd32 });
+    const icosahedron2 = new THREE.Mesh(icosahedron2Geometry, icosahedron2Material);
+    icosahedron2.position.set(0, 0.5, 4);
+    icosahedron2.castShadow = true;
+    scene.add(icosahedron2);
+    shapes.push(icosahedron2);
+
+    // Dodecahedron
+    const dodecahedron2Geometry = new THREE.DodecahedronGeometry(0.5);
+    const dodecahedron2Material = new THREE.MeshStandardMaterial({ color: 0xff4500 });
+    const dodecahedron2 = new THREE.Mesh(dodecahedron2Geometry, dodecahedron2Material);
+    dodecahedron2.position.set(-6, 0.5, 4);
+    dodecahedron2.castShadow = true;
+    scene.add(dodecahedron2);
+    shapes.push(dodecahedron2);
+
+    // Octahedron
+    const octahedron2Geometry = new THREE.OctahedronGeometry(0.5);
+    const octahedron2Material = new THREE.MeshStandardMaterial({ color: 0x9370db });
+    const octahedron2 = new THREE.Mesh(octahedron2Geometry, octahedron2Material);
+    octahedron2.position.set(6, 0.5, 4);
+    octahedron2.castShadow = true;
+    scene.add(octahedron2);
+    shapes.push(octahedron2);
+
+    // Capsule
+    const capsule2Geometry = new THREE.CapsuleGeometry(0.5, 1, 4, 8);
+    const capsule2Material = new THREE.MeshStandardMaterial({ color: 0xff69b4 });
+    const capsule2 = new THREE.Mesh(capsule2Geometry, capsule2Material);
+    capsule2.position.set(-8, 0.5, 4);
+    capsule2.castShadow = true;
+    scene.add(capsule2);
+    shapes.push(capsule2);
+
+    // Tetrahedron
+    const tetrahedron2Geometry = new THREE.TetrahedronGeometry(0.5);
+    const tetrahedron2Material = new THREE.MeshStandardMaterial({ color: 0x4169e1 });
+    const tetrahedron2 = new THREE.Mesh(tetrahedron2Geometry, tetrahedron2Material);
+    tetrahedron2.position.set(8, 0.5, 4);
+    tetrahedron2.castShadow = true;
+    scene.add(tetrahedron2);
+    shapes.push(tetrahedron2);
+
+    // Cone
+    const cone2Geometry = new THREE.ConeGeometry(0.5, 1, 32);
+    const cone2Material = new THREE.MeshStandardMaterial({ color: 0x20b2aa });
+    const cone2 = new THREE.Mesh(cone2Geometry, cone2Material);
+    cone2.position.set(-2, 0.5, 6);
+    cone2.castShadow = true;
+    scene.add(cone2);
+    shapes.push(cone2);
+
+    // Cylinder
+    const cylinder2Geometry = new THREE.CylinderGeometry(0.5, 0.5, 1, 32);
+    const cylinder2Material = new THREE.MeshStandardMaterial({ color: 0xffa500 });
+    const cylinder2 = new THREE.Mesh(cylinder2Geometry, cylinder2Material);
+    cylinder2.position.set(2, 0.5, 6);
+    cylinder2.castShadow = true;
+    scene.add(cylinder2);
+    shapes.push(cylinder2);
+
+    // Sphere
+    const sphere2Geometry = new THREE.SphereGeometry(0.5, 32, 32);
+    const sphere2Material = new THREE.MeshStandardMaterial({ color: 0xda70d6 });
+    const sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Material);
+    sphere2.position.set(-6, 0.5, 6);
+    sphere2.castShadow = true;
+    scene.add(sphere2);
+    shapes.push(sphere2);
+
+    // Box
+    const box2Geometry = new THREE.BoxGeometry(1, 1, 1);
+    const box2Material = new THREE.MeshStandardMaterial({ color: 0x3cb371 });
+    const box2 = new THREE.Mesh(box2Geometry, box2Material);
+    box2.position.set(6, 0.5, 6);
+    box2.castShadow = true;
+    scene.add(box2);
+    shapes.push(box2);
+
+    // TorusKnot
+    const torusKnot3Geometry = new THREE.TorusKnotGeometry(0.5, 0.2, 100, 16);
+    const torusKnot3Material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+    const torusKnot3 = new THREE.Mesh(torusKnot3Geometry, torusKnot3Material);
+    torusKnot3.position.set(-4, 0.5, 8);
+    torusKnot3.castShadow = true;
+    scene.add(torusKnot3);
+    shapes.push(torusKnot3);
+
+    // Torus
+    const torus3Geometry = new THREE.TorusGeometry(0.5, 0.2, 16, 100);
+    const torus3Material = new THREE.MeshStandardMaterial({ color: 0x4682b4 });
+    const torus3 = new THREE.Mesh(torus3Geometry, torus3Material);
+    torus3.position.set(4, 0.5, 8);
+    torus3.castShadow = true;
+    scene.add(torus3);
+    shapes.push(torus3);
+
+    // Icosahedron
+    const icosahedron3Geometry = new THREE.IcosahedronGeometry(0.5);
+    const icosahedron3Material = new THREE.MeshStandardMaterial({ color: 0xcd853f });
+    const icosahedron3 = new THREE.Mesh(icosahedron3Geometry, icosahedron3Material);
+    icosahedron3.position.set(0, 0.5, 8);
+    icosahedron3.castShadow = true;
+    scene.add(icosahedron3);
+    shapes.push(icosahedron3);
+
+    // Dodecahedron
+    const dodecahedron3Geometry = new THREE.DodecahedronGeometry(0.5);
+    const dodecahedron3Material = new THREE.MeshStandardMaterial({ color: 0x9932cc });
+    const dodecahedron3 = new THREE.Mesh(dodecahedron3Geometry, dodecahedron3Material);
+    dodecahedron3.position.set(-8, 0.5, 8);
+    dodecahedron3.castShadow = true;
+    scene.add(dodecahedron3);
+    shapes.push(dodecahedron3);
 }
 
 // Create ground
@@ -245,6 +345,18 @@ const pointLight = new THREE.PointLight(0xffffff, 0.5);
 pointLight.position.set(0, 5, 5);
 pointLight.castShadow = true;
 scene.add(pointLight);
+
+// 添加彩色点光源
+const coloredPointLight = new THREE.PointLight(0xff69b4, 0.8); // 粉红色
+coloredPointLight.position.set(8, 3, -8);
+coloredPointLight.castShadow = true;
+coloredPointLight.distance = 20;
+coloredPointLight.decay = 2;
+scene.add(coloredPointLight);
+
+// 添加点光源辅助器
+const pointLightHelper = new THREE.PointLightHelper(coloredPointLight, 1);
+scene.add(pointLightHelper);
 
 // Add light helpers
 const spotLightHelper = new THREE.SpotLightHelper(spotLight);
