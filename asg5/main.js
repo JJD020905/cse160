@@ -41,6 +41,21 @@ function createBasicShapes() {
     scene.add(cube);
     shapes.push(cube);
 
+    const cube2 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0000ff }));
+    cube2.position.set(-8, 0.5, 2);
+    scene.add(cube2);
+    shapes.push(cube2);
+
+    const cube3 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0000ff }));
+    cube3.position.set(-8, 0.5, 4);
+    scene.add(cube3);
+    shapes.push(cube3);
+
+    const cube4 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x0000ff }));
+    cube4.position.set(-8, 0.5, 2);
+    scene.add(cube4);
+    shapes.push(cube4);
+
     // Sphere
     const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32);
     const sphereMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
@@ -164,7 +179,7 @@ function createBasicShapes() {
 
 // Create ground
 const groundGeometry = new THREE.PlaneGeometry(20, 20);
-const groundMaterial = new THREE.MeshStandardMaterial({ 
+const groundMaterial = new THREE.MeshStandardMaterial({
     color: 0x808080,
     roughness: 0.8,
     metalness: 0.2
@@ -379,13 +394,13 @@ window.addEventListener('resize', () => {
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
-    
+
     // Rotate all basic shapes
     shapes.forEach((shape, index) => {
         shape.rotation.x += 0.01;
         shape.rotation.y += 0.01;
     });
-    
+
     // Update light helpers
     spotLightHelper.update();
     directionalLightHelper.update();
@@ -395,13 +410,13 @@ function animate() {
         const firework = fireworks[i];
         const positions = firework.geometry.attributes.position.array;
         const velocities = firework.userData.velocities;
-        
+
         // Update each particle's position
         for (let j = 0; j < positions.length; j += 3) {
             positions[j] += velocities[j/3].x;
             positions[j + 1] += velocities[j/3].y;
             positions[j + 2] += velocities[j/3].z;
-            
+
             // Add gravity effect
             velocities[j/3].y -= 0.001;
 
@@ -432,22 +447,22 @@ function animate() {
                     break;
             }
         }
-        
+
         firework.geometry.attributes.position.needsUpdate = true;
-        
+
         // Decrease life value
         firework.userData.life -= 0.01;
         firework.material.opacity = firework.userData.life;
-        
+
         // Remove firework if it's gone
         if (firework.userData.life <= 0) {
             scene.remove(firework);
             fireworks.splice(i, 1);
         }
     }
-    
+
     controls.update();
     renderer.render(scene, camera);
 }
 
-animate(); 
+animate();
