@@ -46,12 +46,12 @@ function createBasicShapes() {
     scene.add(cube2);
     shapes.push(cube2);
 
-    const cube3 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0xf000ff }));
+    const cube3 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0xf080ff }));
     cube3.position.set(-8, 0.5, 4);
     scene.add(cube3);
     shapes.push(cube3);
 
-    const cube4 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00ffff }));
+    const cube4 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00ff9f }));
     cube4.position.set(-8, 0.5, 6);
     scene.add(cube4);
     shapes.push(cube4);
@@ -60,6 +60,11 @@ function createBasicShapes() {
     cube5.position.set(-8, 2, 0);
     scene.add(cube5);
     shapes.push(cube5);
+
+    const cube6 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00f8ff }));
+    cube6.position.set(-8, 4, 0);
+    scene.add(cube6);
+    shapes.push(cube6);
 
     // Sphere
     const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32);
