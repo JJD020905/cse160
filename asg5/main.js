@@ -56,6 +56,11 @@ function createBasicShapes() {
     scene.add(cube4);
     shapes.push(cube4);
 
+    const cube5 = new THREE.Mesh(cubeGeometry, new THREE.MeshStandardMaterial({ color: 0x00ffff }));
+    cube5.position.set(-8, 2, 0);
+    scene.add(cube5);
+    shapes.push(cube5);
+
     // Sphere
     const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32);
     const sphereMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
